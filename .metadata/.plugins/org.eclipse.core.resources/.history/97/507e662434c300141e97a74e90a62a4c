@@ -1,0 +1,37 @@
+package lab5.CarWashState;
+
+public class FastCarWash implements CarWash {
+	
+	int avaliableSpots;
+	int capacity;
+
+	public FastCarWash(int _capacity){
+		capacity = _capacity;
+	}
+	
+	
+	/**
+	 *  @return true if there's avaliable spots
+	 *  @return false if there isn't any avaliable spots
+	 * */
+	
+	@Override
+	public boolean addCar() {
+		if(avaliableSpots >= 0){
+			avaliableSpots--;
+			return true;
+		}
+		return false;
+	}
+
+	
+	
+	@Override
+	public boolean removeCar() {
+		if(avaliableSpots <= capacity){
+			avaliableSpots++;
+		}
+		return false;
+	}
+
+}

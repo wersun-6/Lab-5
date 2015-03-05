@@ -1,0 +1,40 @@
+package lab5.CarWashState;
+
+public class FastCarWash implements CarWash {
+	
+	int availableSpots;
+	int capacity;
+
+	public FastCarWash(int _capacity){
+		capacity = _capacity;
+	}
+	
+	
+	/**
+	 *  @return True if there's any available spots in the carwash.
+	 * */
+	
+	@Override
+	public boolean addCar() {
+		if(availableSpots >= 0){
+			availableSpots--;
+			return true;
+		}
+		return false;
+	}
+
+	
+	/**
+	 *  @return True if it's possible to withdraw more cars from this carwash. IOW, it 
+	 *  cannot have more available spots then the carwash's capacity.
+	 * */
+	
+	@Override
+	public boolean removeCar() {
+		if(availableSpots <= capacity){
+			availableSpots++;
+		}
+		return false;
+	}
+
+}

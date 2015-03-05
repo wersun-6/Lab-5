@@ -1,0 +1,8 @@
+package lab5.CarWashState;
+
+public interface CarWash {
+	
+	public boolean addCar();
+	
+	public boolean removeCar();
+}

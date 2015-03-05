@@ -1,0 +1,24 @@
+package lab5.CarWashState;
+
+public class FastCarWash implements CarWash {
+	
+	int avaliableSpots;
+	int capacity;
+
+	public FastCarWash(int _capacity){
+		capacity = _capacity;
+	}
+	
+	@Override
+	public boolean addCar() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean removeCar() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

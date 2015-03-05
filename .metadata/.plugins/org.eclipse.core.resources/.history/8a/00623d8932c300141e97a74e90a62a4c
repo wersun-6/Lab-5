@@ -1,0 +1,55 @@
+package lab5.CarWashState;
+
+/** Temporary abstract class
+ * */
+abstract class SimState{
+	public int currentTime;
+}
+
+abstract class CarFactory{
+	public int carID;
+	Event event;
+	abstract void addCar();
+}
+
+abstract class Event{
+	public double executeTime;
+	abstract void execute();
+	abstract void setExecuteTime();
+	abstract void stopEvent();
+	
+	public double getExecuteTime(){
+		return 1.0;
+	}
+}
+
+public class CarWashState extends SimState{
+	private int FAST_CAR_WASH = 0;
+	private int SLOW_CAR_WASH = 0;
+	private int MAX_CAR_QUEUE = 0;
+	private int currentQueue = 0;
+	private double idleTime = 0;
+	private int rejectedCars = 0;
+	
+	public CarWashState(int amountFast, int amountSlow, int maxQueue){
+		FAST_CAR_WASH = amountFast;
+		SLOW_CAR_WASH = amountSlow;
+		MAX_CAR_QUEUE = maxQueue;
+	}
+	
+	public double getIdleTime(){
+		return idleTime;
+	}
+	
+	public int getRejectedCars(){
+		return rejectedCars;
+	}
+	
+	/*
+	 * TODO: Calculate the washtime depending on how many cars are in which carwash, and on how many which are in queue to join the carwash
+	 * */
+	public double getWashTime(){
+		//Temporary number (duhh)
+		return 1337;
+	}
+}

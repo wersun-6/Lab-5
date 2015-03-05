@@ -1,0 +1,17 @@
+package lab5.CarWashState;
+
+public class SlowCarWash implements CarWash {
+
+	@Override
+	public boolean addCar() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean removeCar() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}
